@@ -7,28 +7,44 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <nav class = "calculator">
+    <div class="calculator-heading">
         <h1>Calculator</h1>
-        <button type="button">AC</button>
-        <button type="button">+/-</button>
-        <button type="button">%</button>
-    <button type="button">÷</button>
-    <button type="button">9</button>
-    <button type="button">8</button>
-    <button type="button">7</button>
-    <button type="button">x</button>
-    <button type="button">6</button>
-    <button type="button">5</button>
-    <button type="button">4</button>
-    <button type="button">-</button>
-    <button type="button">3</button>
-    <button type="button">2</button>
-    <button type="button">1</button>
-    <button type="button">+</button>
-    <button type="button">0</button>
-    <button type="button">.</button>
-    <button type="button">=</button>
-    </nav>
-    
+    </div>
+
+    <div class="calculator-container">
+        <nav class = "calculator">
+           
+            <button type="button" onclick="clearDisplay()">AC</button>
+            <button type="button" onclick="toggleSign()">+/-</button>
+            <button type="button" onclick="percentage()">%</button>
+            <button type="button" onclick="appendOperator('/')">÷</button>
+            <button type="button" onclick="appendNumber(7)">7</button>
+            <button type="button" onclick="appendNumber(8)">8</button>
+            <button type="button" onclick="appendNumber(9)">9</button>
+            <button type="button" onclick="appendOperator('*')">x</button>
+            <button type="button" onclick="appendNumber(4)">4</button>
+            <button type="button" onclick="appendNumber(5)">5</button>
+            <button type="button" onclick="appendNumber(6)">6</button>
+            <button type="button" onclick="appendOperator('-')">-</button>
+            <button type="button" onclick="appendNumber(1)">1</button>
+            <button type="button" onclick="appendNumber(2)">2</button>
+            <button type="button" onclick="appendNumber(3)">3</button>
+            <button type="button" onclick="appendOperator('+')">+</button>
+            <button type="button" onclick="appendNumber('0')">0</button>
+            <button type="button" onclick="appendDecimal()">.</button>
+            <button type="button" onclick="calculateResult()">=</button>
+        </nav>    
+        <div class="calculator-display">
+            <ul class="history-list" id="history-list"></ul>
+            <div class="input-output-container">
+                <div class="input-display">0</div>
+                <div class="output-display">0</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+  
 </body>
 </html>
